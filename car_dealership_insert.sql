@@ -1,15 +1,15 @@
--- CREATE FUNCTION add_salesperson(_first_name VARCHAR, _last_name VARCHAR)
--- RETURNS void
--- AS $MAIN$
--- BEGIN
--- 	INSERT INTO salesperson(first_name, last_name)
--- 	VALUES(_first_name, _last_name);
--- END;
--- $MAIN$
--- LANGUAGE plpgsql;
+CREATE FUNCTION add_salesperson(_first_name VARCHAR, _last_name VARCHAR)
+RETURNS void
+AS $MAIN$
+BEGIN
+	INSERT INTO salesperson(first_name, last_name)
+	VALUES(_first_name, _last_name);
+END;
+$MAIN$
+LANGUAGE plpgsql;
 
--- SELECT add_salesperson('Taeho', 'Kim');
--- SELECT add_salesperson('Not', 'Taeho');
+SELECT add_salesperson('Taeho', 'Kim');
+SELECT add_salesperson('Not', 'Taeho');
 
 INSERT INTO customer(
 	customer_id,
